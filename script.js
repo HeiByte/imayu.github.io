@@ -1,29 +1,6 @@
-function createAnimationObserve(selector, animationClasses, threshold = 0.3) {
-  const targets = document.querySelectorAll(selector);
-  const observe = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(...animationClasses);
-          observe.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: threshold,
-    }
-  );
-
-  targets.forEach((target) => {
-    observe.observe(target);
-  });
-}
-
-createAnimationObserve(".c-1", ["animate__animated", "animate__rotateInUpLeft"], 0.2);
-createAnimationObserve(".c-2", ["animate__animated", "animate__rotateInUpRight"], 0.2);
-createAnimationObserve(".an-1", ["animate__animated", "animate__lightSpeedInLeft"], 0.2);
-createAnimationObserve(".an-2", ["animate__animated", "animate__lightSpeedInLeft"], 0.2);
-createAnimationObserve(".an-3", ["animate__animated", "animate__lightSpeedInLeft"], 0.2);
-createAnimationObserve(".an-co-1", ["animate__animated", "animate__bounceInUp"], 0.2);
-createAnimationObserve(".an-co-2", ["animate__animated", "animate__bounceInUp"], 0.2);
-createAnimationObserve(".an-co-3", ["animate__animated", "animate__bounceInUp"], 0.2);
+gsap.from(".jumbotron img", { duration: 2, rotateY: 360, opacity: 0 });
+gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+gsap.from(".display-4", { duration: 1.2, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+//list as many as you'd like
+gsap.registerPlugin(TextPlugin);
+gsap.to(".lead", { duration: 2, delay: 1.5, text: "Student Go to the Programmer" });

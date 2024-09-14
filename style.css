@@ -20,23 +20,3 @@
 section {
   padding-top: 5rem;
 }
-
-.an-1 {
-  --animate-duration: 1s;
-}
-.an-2 {
-  --animate-duration: 1.5s;
-}
-.an-3 {
-  --animate-duration: 2s;
-}
-
-.an-co-1 {
-  --animation-duration: 4s;
-}
-.an-co-2 {
-  --animation-duration: 4.5s;
-}
-.an-co-3 {
-  --animation-duration: 5s;
-}
